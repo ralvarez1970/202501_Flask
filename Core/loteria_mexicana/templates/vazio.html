@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loteria mexicana</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+
+<body>
+
+    <h1>Loteria Mexicana</h1>
+
+    <div class="container">
+
+        <h2 id="alerta">Atenção: você deve usar entrar http://127.0.0.1:5000/linhas/colunas/cores</h2>
+        <h2 class="explicacao"><span class="destaque">Linhas</span> é um valor inteiro = número de <span class="destaque">linhas</span> que você deseja</h2>
+        <h2 class="explicacao"><span class="destaque">Colunas</span> é um valor inteiro = número de <span class="destaque">colunas</span> que você deseja</h2>
+        <h2 class="explicacao"><span class="destaque">Cores</span> é opcional! Entre um inteiro.</h2>
+        <h2 class="explicacao">Caso você não entrar nenhum valor, usaremos o default: <span class="destaque">rosa, azul e amarelo.</span> </h2>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/mi_script.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+</body>
+
+</html>
