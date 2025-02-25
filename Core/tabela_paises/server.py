@@ -2,7 +2,6 @@
 ## Exercicio <core> "Loteria mexicana"
 
 from flask import Flask, render_template 
-import random
 
 app = Flask(__name__)
 
@@ -23,6 +22,10 @@ paises = [
         {'pais': 'Perú' , 'capital': 'Lima'}
 
 ]
+
+@app.route('/paises')
+def gera_tabela():
+    return render_template('index.html', paises=paises)
 
 
 @app.errorhandler(404)
