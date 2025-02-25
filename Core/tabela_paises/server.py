@@ -1,5 +1,5 @@
 ## R. Alvarez, Python Bootcamp, Jan 2025
-## Exercicio <core> "Loteria mexicana"
+## Exercicio <core> "Tabela Paises"
 
 from flask import Flask, render_template 
 
