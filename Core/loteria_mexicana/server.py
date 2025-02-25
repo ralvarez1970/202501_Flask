@@ -29,7 +29,20 @@ def loteria(x, y, z):
         txt_cores = "Cores: default"
     else:
         txt_cores = "Cores: " + str (z)
-    return render_template('index.html', cores=cores, linhas = x, colunas = y, display=cartas_mostrar, quantas_cores=cores_validas, explica_cores=txt_cores)
+    if y <= 14:
+        proporcao = 1
+    else:
+        proporcao = 14 / y
+    return render_template('index.html', cores=cores, linhas = x, colunas = y, display=cartas_mostrar, quantas_cores=cores_validas, explica_cores=txt_cores, proporcao=proporcao)
+
+@app.route('/loteria')
+def loteria_default ():
+    numero_cartas = 16
+    cartas_mostrar = random.sample (cartas, numero_cartas)
+    txt_cores = "Cores: default"
+    cores_validas = 3
+    proporcao = 1
+    return render_template('index.html', cores=cores, linhas = 4, colunas = 4, display=cartas_mostrar, quantas_cores=cores_validas, explica_cores=txt_cores, proporcao=proporcao)
 
 @app.errorhandler(404)
 def page_not_found(error):

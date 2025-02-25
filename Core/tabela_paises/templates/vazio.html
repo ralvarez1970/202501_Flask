@@ -4,33 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loteria mexicana</title>
+    <title>Tabela países</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-
-    <style>
-        .box {
-            width: {{proporcao * 100}}px;
-            font-size: {{proporcao * 18}}px;
-        }
-    </style>
-
 </head>
 
 <body>
 
-    <h1>Loteria Mexicana | Linhas: {{linhas}} | Colunas: {{colunas}} | {{explica_cores}}</h1>
+    <h1>Loteria Mexicana</h1>
 
     <div class="container">
-        {% for line in range (linhas): %}
-        <div class="box_wrap">
-            {% for column in range (colunas): %}
-            {% set cor = (line + column) % quantas_cores %}
-            {% set cor_text = 'white' if cores[cor] == '#000000' else 'black' %}
-            <div class="box" style="background-color: {{ cores[cor] }}; color: {{cor_text}}"> {{ display[(line) * (colunas) + (column)] }} </div>
-            {% endfor %}
-        </div>
-        {% endfor %}
+
+        <h2 id="alerta">Atenção: </h2>
+        <h2 class="explicacao"><span class="destaque">Linhas</span> é um valor inteiro = número de <span class="destaque">linhas</span> que você deseja</h2>
+        <h2 class="explicacao"><span class="destaque">Colunas</span> é um valor inteiro = número de <span class="destaque">colunas</span> que você deseja</h2>
+ 
     </div>
 
     <script type="text/javascript" src="{{ url_for('static', filename='js/mi_script.js') }}"></script>
