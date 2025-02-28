@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela paises</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+
+<body>
+
+    <h1>Tabela paises</h1>
+
+    <div class="container">
+        <div class="linha" style="background-color: rgb(211, 226, 252)" >
+            <div class = "col1" style="font-weight: bolder">País</div>
+            <div class = "col2" style="font-weight: bolder">Capital</div>
+        </div>
+        {% for pais in paises%}
+            {% set i = 0 %}
+            {% set cor = "rgb(242, 242, 242)" if i % 2 != 0 else "rgb(255, 255, 255)" %}
+            <div class="linha" style="background-color: {{cor}}">
+                <div class = "col1">{{pais['pais']}}</div>
+                <div class = "col2">{{pais['capital']}}</div>
+            </div>
+        {% endfor %}
+
+        
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/mi_script.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+</body>
+
+</html>

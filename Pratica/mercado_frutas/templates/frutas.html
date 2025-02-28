@@ -1,0 +1,114 @@
+<html>
+
+<head>
+  <title>Mercado de Frutas</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <style>
+    .card-img-container {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      /* Set a fixed height */
+      overflow: hidden;
+      /* Hide overflowing parts of larger images */
+    }
+
+    .card-img-container img {
+      height: 100%;
+      width: auto;
+      /* Maintain aspect ratio */
+      object-fit: cover;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <header>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+          <strong>Mercado</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+          aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Mercado de Frutas</h1>
+
+        <div class="row">
+          <div class="col-3">
+            <div class="card" style="width: 18rem; aspect-ratio: 1/1.4;">
+              <div class="card-img-container">
+                <img src="static/img/apple.png" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Manzana</h5>
+                <p class="card-text">Que manzana deliciosa.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem; aspect-ratio: 1/1.4;">
+              <div class="card-img-container">
+                <img src="static/img/blackberry.png" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Blackberry</h5>
+                <p class="card-text">Es una fruta y no un teléfono, otro sabor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem; aspect-ratio: 1/1.4;">
+              <div class="card-img-container">
+                <img src="static/img/raspberry.png" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Frambuesa</h5>
+                <p class="card-text">Ahora yo sé el nombre en español... frambuesa.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+
+            <div class="card" style="width: 18rem;aspect-ratio: 1/1.4;">
+              <div class="card-img-container">
+                <img src="static/img/strawberry.png" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Frutilla</h5>
+                <p class="card-text">Roja, tradicional, con mucho sabor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="/" class="btn btn-primary my-2">Regresar</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>
