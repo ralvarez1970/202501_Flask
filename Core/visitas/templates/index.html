@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de visitas</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+
+<body>
+    <h1 style="margin-top: 50px;">Contador de visitas</h1>
+    <div class="container">
+        <h2>Esta é a sessão <span class="destaque">{{sessoes}}</span>.</h2>
+        <h2>Você acessou este website <span class="destaque">{{contador}}</span> vez{{plural}} nesta sessão.</h2>
+        <h2>O contador de acessos foi zerado <span class="destaque">{{reset}}</span> vez{{plural_reset}} nesta sessão.</h2>
+        <form action="/adjust/" method="POST">
+            <button class="btn btn-primary btn-lg btn-block botao_visitas" type="submit" name="soma_dois" value="yes">Aumenta visitas em 2</button>
+            <button class="btn btn-primary btn-lg btn-block botao_visitas" type="submit" name="zero" value="yes">Reseta contador | Volta a zero</button>
+        </form>
+        <form action="/adjust/" method="POST">
+            <input type="text" style="margin-top: 50px; width: 350px; height: 45px;" name="incremento" value="" placeholder="Entre número de sessões a incrementar...">
+            <input type="submit" class="btn btn-primary btn-lg btn-block">
+        </form>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/mi_script.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+</body>
+
+</html>
