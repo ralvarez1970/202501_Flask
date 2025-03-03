@@ -1,0 +1,41 @@
+
+body {
+    font-family: Arial;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#alerta {
+    color: red;
+    margin: 50px;
+}
+
+.explicacao {
+    margin: 30px;
+}
+
+.destaque {
+    text-decoration: underline;
+    color: red;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.box_alerta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 480px;
+    height: 130px;
+    padding: 10px;
+}

@@ -7,7 +7,7 @@ sessoes = 1
 
 app = Flask(__name__)
 
-app.secret_key = 'your_secret_key'  # Required for using sessions
+app.secret_key = 'your_secret_key' 
 
 @app.route('/')
 def home():

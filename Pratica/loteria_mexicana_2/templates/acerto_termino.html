@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLoteria Mexicana 2</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+
+<body>
+    <h1 style="margin-top: 50px;">Bem-vindo à Loteria Mexicana 2!</h1>
+    <p style="text-align: center;">Escolheremos uma carta aletória da loteria e você deve adivinhar o número da carta.</p>
+    <p style="text-align: center;">Atenção: você tem um máximo de 5 tentativas. Boa sorte!</p>
+    <div class="container">
+        <div class="box_alerta" style="background-color: {{color}};">
+            <h2>{{texto}}</h2>
+        </div>
+        <form style="width: 500px; height: 100px; display: flex; flex-direction: row; align-items: center;" action="/jogar_novamente/">
+            <input type="submit" class="btn btn-primary btn-lg btn-block" value="Jogar novamente!">
+        </form>
+        <h3 style="margin-top: 20 px; text-align: center;">{{texto_contagem}}</h3>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/mi_script.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+</body>
+
+</html>
