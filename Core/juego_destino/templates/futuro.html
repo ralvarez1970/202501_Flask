@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Destino</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+
+<body>
+    <h1 style="margin-top: 50px;">Bem-vindo ao Jogo do Destino!</h1>
+
+    <div class="container">
+        <div class="box_texto">
+            {% if sorte >5 %}:
+            <h2 style="margin-top: 20px; text-align: center;"> Sou o adivinho do Dojo, <span style="color: green">{{nome}}</span> terá uma viagem muito
+                longa ao <span style="color: rgb(246, 195, 68)">{{lugar}}</span> dentro de <span style="color: blue">{{numero}}</span> e estará o resto de seus dias preparando <span style="color: rgba(92, 196, 231)">{{comida}}</span> para todas
+                as pessoas de quem gosta.</h2>
+            <h2 style="margin-top: 20px; text-align: center;"> Vejo uma mudança de profissão... agora você é <span style="color: red">{{profissao}}</span>!</h2>
+            {% else %}:
+            <h2 style="margin-top: 20px; text-align: center;"> Sou o adivinho do Dojo, <span style="color: green">{{nome}}</span> terá <span style="color: blue">{{numero}}</span> anos de má sorte, nunca conhecerá <span style="color: rgb(246, 195, 68)">{{lugar}}</span> e jamais voltará a comer <span style="color: rgba(92, 196, 231)">{{comida}}</span>.</h2>
+            <h2 style="margin-top: 20px; text-align: center;"> Você não conseguirá mudar de profissão e nunca será <span style="color: red">{{profissao}}</span>!</h2>
+            {% endif %}
+        </div>
+        <a href="/jogar_novamente/">Jogar novamente!</a>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/mi_script.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+</body>
+
+</html>

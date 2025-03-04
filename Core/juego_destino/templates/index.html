@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Destino</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+
+<body>
+    <h1 style="margin-top: 50px;">Quer conhecer o seu futuro?</h1>
+    <p style="text-align: center;">Entre com as suas respostas e contaremos o seu futuro.</p>
+    <div class="form-container mt-5" method="post">
+        <form action="/enviar/" method="post">
+            <div class="mb-3">
+                <label class="form-label">Seu nome:</label>
+                <input type="text" name="nome" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Um lugar:</label>
+                <input type="text" name="lugar" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Um número:</label>
+                <input type="number" name="numero" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sua comida favorita:</label>
+                <input type="text" name="comida" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Escolha a profissão desejada:</label>
+                <select class="form-control" name="profissao">
+                    <option value="manicure">Manicure</option>
+                    <option value="neurocientista">Neurocientista</option>
+                    <option value="stripper">Stripper</option>
+                    <option value="astrobiólogo">Astrobiólogo</option>
+                    <option value="empreendedor">Empreendedor</option>
+                    <option value="policial">Policial</option>
+                </select>
+                
+            </div>
+            <button type="submit" class="btn btn-custom">Ver meu destino</button>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/mi_script.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+</body>
+
+</html>
